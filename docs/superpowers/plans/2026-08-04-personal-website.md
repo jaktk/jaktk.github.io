@@ -4,7 +4,7 @@
 
 **Goal:** Turn the al-folio starter (Einstein demo content) into Jakub Tkaczuk's personal site — chronological Scholar publications, LinkedIn-derived About/CV, a tagged Projects + supervised-Theses showcase, curated repositories, and no demo content.
 
-**Architecture:** Pure al-folio v1.x *content* customization — edit `_config.yml`, `_data/*`, `_pages/*`, `_bibliography/papers.bib`, `_projects/*`, and `assets/*`. **No** `_includes`/`_layouts`/`_sass`/`_scripts`/`assets/tailwind` files are created (keeps the `lint:style-contract` CI gate green). Tag pills and the Projects card grid are rendered by content-level Liquid + a self-contained `<style>` block inside the relevant `_pages/*` file.
+**Architecture:** Pure al-folio v1.x _content_ customization — edit `_config.yml`, `_data/*`, `_pages/*`, `_bibliography/papers.bib`, `_projects/*`, and `assets/*`. **No** `_includes`/`_layouts`/`_sass`/`_scripts`/`assets/tailwind` files are created (keeps the `lint:style-contract` CI gate green). Tag pills and the Projects card grid are rendered by content-level Liquid + a self-contained `<style>` block inside the relevant `_pages/*` file.
 
 **Tech Stack:** Jekyll + al-folio v1 gems (`al_folio_core`, `jekyll/scholar`, `al_citations`, `al_folio_cv`, `al_icons`), Ruby/Bundler, Node (prettier + style-contract), JSONResume.
 
@@ -26,36 +26,54 @@
 
 Domains carry a colored dot; methods use a neutral gray dot.
 
-| Tag | Kind | Dot color |
-|-----|------|-----------|
-| cryogenics | domain | `#3b82f6` |
-| thermodynamics | domain | `#6366f1` |
-| biogas | domain | `#16a34a` |
-| sanitation | domain | `#0d9488` |
-| air quality | domain | `#64748b` |
-| organic waste | domain | `#ca8a04` |
-| anthropogenic waste | domain | `#ea580c` |
-| water | domain | `#0ea5e9` |
-| mathematical modelling | method | `#9ca3af` |
-| optimization | method | `#9ca3af` |
-| equations of state | method | `#9ca3af` |
-| sensing & instrumentation | method | `#9ca3af` |
+| Tag                         | Kind   | Dot color |
+| --------------------------- | ------ | --------- |
+| cryogenics                  | domain | `#3b82f6` |
+| thermodynamics              | domain | `#6366f1` |
+| biogas                      | domain | `#16a34a` |
+| sanitation                  | domain | `#0d9488` |
+| air quality                 | domain | `#64748b` |
+| organic waste               | domain | `#ca8a04` |
+| anthropogenic waste         | domain | `#ea580c` |
+| water                       | domain | `#0ea5e9` |
+| mathematical modelling      | method | `#9ca3af` |
+| optimization                | method | `#9ca3af` |
+| equations of state          | method | `#9ca3af` |
+| sensing & instrumentation   | method | `#9ca3af` |
 | prototyping / open hardware | method | `#9ca3af` |
-| field deployment | method | `#9ca3af` |
-| particle physics | method | `#9ca3af` |
+| field deployment            | method | `#9ca3af` |
+| particle physics            | method | `#9ca3af` |
 
 ## Reusable snippet A — pill `<style>` (theme-safe; used in `projects.md` and `publications.md`)
 
 ```html
 <style>
-  .tag-row { margin-top: .4rem; display: flex; flex-wrap: wrap; gap: .35rem; }
-  .tag-pill {
-    display: inline-flex; align-items: center; gap: .3rem;
-    font-size: .72rem; line-height: 1; padding: .28rem .55rem;
-    border-radius: 999px; background: rgba(127,127,127,.12);
-    border: 1px solid rgba(127,127,127,.28); color: inherit; white-space: nowrap;
+  .tag-row {
+    margin-top: 0.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
   }
-  .tag-dot { width: .5rem; height: .5rem; border-radius: 50%; background: #9ca3af; flex: 0 0 auto; }
+  .tag-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.72rem;
+    line-height: 1;
+    padding: 0.28rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(127, 127, 127, 0.12);
+    border: 1px solid rgba(127, 127, 127, 0.28);
+    color: inherit;
+    white-space: nowrap;
+  }
+  .tag-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #9ca3af;
+    flex: 0 0 auto;
+  }
 </style>
 ```
 
@@ -64,6 +82,7 @@ Each pill: `<span class="tag-pill"><span class="tag-dot" style="background:#16a3
 ## Reusable snippet B — project/thesis card front-matter templates
 
 Own project (`_projects/cryo-magnetic-refrigeration.md` etc.):
+
 ```yaml
 ---
 layout: page
@@ -78,6 +97,7 @@ related_publications: true
 ```
 
 Student thesis (`_projects/thesis-<student>.md`):
+
 ```yaml
 ---
 layout: page
@@ -90,8 +110,8 @@ student: <Full Name>
 degree: <BSc|MSc|Semester project>
 year: <year>
 role: <Supervisor|Co-supervisor>
-eth_collection:            # ETH Research Collection URL — Jakub fills manually
-repo:                      # GitHub URL — Jakub fills manually
+eth_collection: # ETH Research Collection URL — Jakub fills manually
+repo: # GitHub URL — Jakub fills manually
 tags: [<domain>, <method>, ...]
 related_publications: false
 ---
@@ -124,6 +144,7 @@ related_publications: false
 **Files:** Modify `.gitignore`, `_config.yml`.
 
 - [ ] **Step 1 — git-ignore big inputs.** Append to `.gitignore`:
+
 ```
 # working inputs, not part of the site
 resources/
@@ -132,6 +153,7 @@ projects-to-showcase.md
 repos-to-showcase.md
 claude_sessions.sh
 ```
+
 - [ ] **Step 2 — `_config.yml` identity.** Set `first_name: Jakub`, `middle_name: ""`, `last_name: Tkaczuk`, `title: blank`. Replace `contact_note`, `description` (cryogenics · thermodynamics · global health engineering · biogas · low-cost instrumentation), `keywords`, `footer_text` (drop the al-folio boilerplate credit if desired — keep the Jekyll/al-folio attribution per license), `icon: ❄️`.
 - [ ] **Step 3 — hosting.** `url: https://jaktk.github.io`, `baseurl: ""`.
 - [ ] **Step 4 — scholar.** `scholar.last_name: [Tkaczuk]`, `scholar.first_name: [Jakub, J.]`.
@@ -180,6 +202,7 @@ claude_sessions.sh
 Preview map: `jpcrd-hene`→EoS mixtures 2020; `magnetic-refrigeration`→2017; `phd-thesis`→2021 dissertation; `fcc-ee`,`fcc-hh`,`fcc-physics`,`he-lhc`→collaboration reports 2019; `autocrime`→Autocrime 2025; `waste-bin-placement`→2026; `willingness-to-pay`→2025; `policy-brief-cape-maclear`→policy brief.
 
 **Snippet C — `additional_info` pills (single line, no line breaks):**
+
 ```
 additional_info = {<span class="tag-row"><span class="tag-pill"><span class="tag-dot" style="background:#3b82f6"></span>cryogenics</span><span class="tag-pill"><span class="tag-dot" style="background:#9ca3af"></span>equations of state</span></span>},
 ```
@@ -223,7 +246,7 @@ additional_info = {<span class="tag-row"><span class="tag-pill"><span class="tag
 **Files:** Modify `_data/repositories.yml`, rewrite `_pages/repositories.md`.
 
 - [ ] **Step 1 — data.** `github_users: [jaktk]`; add `github_repos_developed:` (5 from repos-to-showcase "Developed") and `github_repos_supervised:` (16 from "Supervised and co-developed"). Keep `repo_description_lines_max`.
-- [ ] **Step 2 — page.** Rewrite `_pages/repositories.md` to render two `## Developed` / `## Supervised & co-developed` sections, each looping its list with `{% include repository/repo.liquid repository=repo %}` (gem include — allowed to *use*, not override). Keep the `github_users` block for the profile card + trophies.
+- [ ] **Step 2 — page.** Rewrite `_pages/repositories.md` to render two `## Developed` / `## Supervised & co-developed` sections, each looping its list with `{% include repository/repo.liquid repository=repo %}` (gem include — allowed to _use_, not override). Keep the `github_users` block for the profile card + trophies.
 - [ ] **Step 3 — build & commit.** Build succeeds; both groups render; `git commit -am "feat: repositories page with developed/supervised groups"`.
 
 ## Task 10: CV — JSONResume from LinkedIn
@@ -257,6 +280,7 @@ additional_info = {<span class="tag-row"><span class="tag-pill"><span class="tag
 ---
 
 ## Self-review notes
+
 - **Spec coverage:** identity/config (T1), removals (T2), images (T3), about+socials (T4), publications+pills (T5), own projects (T6), theses (T7), projects grid (T8), repos (T9), CV (T10), blog (T11), validation (T12) — every spec section maps to a task.
 - **Boundary:** T5/T8 render pills via page `<style>` + content Liquid; no gem-file creation → style contract safe (verified in T12).
 - **Deferred-by-design:** exact thesis titles/categories/abstracts produced by the T7 read-pass; thesis `eth_collection`/`repo` links filled by Jakub later.

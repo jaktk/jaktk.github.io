@@ -15,3 +15,10 @@ node_modules/
 output/playwright/
 test-results/
 vendor
+
+# working inputs — not part of the built site
+resources/
+linkedin-content.md
+projects-to-showcase.md
+repos-to-showcase.md
+claude_sessions.sh

@@ -9,17 +9,17 @@ repository list, and a CV — with teaching and all other demo content removed.
 
 ## Confirmed decisions (from brainstorming)
 
-| # | Decision | Choice |
-|---|----------|--------|
-| 1 | Publications scope | **All** Scholar works, newest-first, grouped by year; ~4 lead-author works marked `selected` for the homepage. |
-| 2 | Publication order | **Newest first** (reverse-chronological). |
-| 3 | Optional sections kept | **CV** + **Blog**. Removed: Teaching, Books, dropdown demo, News feed. |
-| 4 | Hosting | **GitHub Pages user site** → `https://jaktk.github.io`, `baseurl: ""`. |
-| 5 | Projects vs theses | **One `projects` collection**; Jakub's work and the 22 student theses are cards separated by **category** and by per-card student attribution. |
-| 6 | Full-document links | **Link out**, PDFs stay **out of the repo**. Papers → journal DOI. Theses → **ETH Research Collection** record and/or **GitHub** repo, filled in **manually by Jakub** per thesis (some have both, some neither). Only small figures/result images are committed. |
-| 7 | Thesis abstracts | **Concise, uniform, ~120 words** each, one neutral voice, written by reading each thesis. |
-| 8 | Tag presentation | **Subtle pills** — soft neutral chip + tiny per-domain color dot — on project/thesis cards and detail pages. |
-| 9 | Tag filtering | **Labels only**, no interactive filter bar. |
+| #   | Decision               | Choice                                                                                                                                                                                                                                                            |
+| --- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Publications scope     | **All** Scholar works, newest-first, grouped by year; ~4 lead-author works marked `selected` for the homepage.                                                                                                                                                    |
+| 2   | Publication order      | **Newest first** (reverse-chronological).                                                                                                                                                                                                                         |
+| 3   | Optional sections kept | **CV** + **Blog**. Removed: Teaching, Books, dropdown demo, News feed.                                                                                                                                                                                            |
+| 4   | Hosting                | **GitHub Pages user site** → `https://jaktk.github.io`, `baseurl: ""`.                                                                                                                                                                                            |
+| 5   | Projects vs theses     | **One `projects` collection**; Jakub's work and the 22 student theses are cards separated by **category** and by per-card student attribution.                                                                                                                    |
+| 6   | Full-document links    | **Link out**, PDFs stay **out of the repo**. Papers → journal DOI. Theses → **ETH Research Collection** record and/or **GitHub** repo, filled in **manually by Jakub** per thesis (some have both, some neither). Only small figures/result images are committed. |
+| 7   | Thesis abstracts       | **Concise, uniform, ~120 words** each, one neutral voice, written by reading each thesis.                                                                                                                                                                         |
+| 8   | Tag presentation       | **Subtle pills** — soft neutral chip + tiny per-domain color dot — on project/thesis cards and detail pages.                                                                                                                                                      |
+| 9   | Tag filtering          | **Labels only**, no interactive filter bar.                                                                                                                                                                                                                       |
 
 ## Site map / navigation
 
@@ -32,7 +32,7 @@ Order via `nav_order`. Removed pages are deleted, not hidden.
 5. **CV** (`/cv/`) — from LinkedIn via JSONResume.
 6. **Blog** (`/blog/`) — kept, emptied of demo posts.
 
-> **Deploy prerequisite:** a GitHub *user* site is served only from a repo literally named
+> **Deploy prerequisite:** a GitHub _user_ site is served only from a repo literally named
 > `jaktk.github.io`. This repo is `personal-website`. Before publishing, either rename the
 > repo to `jaktk.github.io` or attach a custom domain (CNAME). Config is written for the
 > root/user-site case regardless.
@@ -40,6 +40,7 @@ Order via `nav_order`. Removed pages are deleted, not hidden.
 ## File-by-file plan
 
 ### Config & identity — `_config.yml`
+
 - `first_name/middle_name/last_name` → `Jakub` / (blank) / `Tkaczuk`; `title` blank (uses full name).
 - `url: https://jaktk.github.io`, `baseurl: ""`.
 - `description`, `keywords` → cryogenics, thermodynamics, global health engineering, biogas, low-cost instrumentation.
@@ -50,22 +51,26 @@ Order via `nav_order`. Removed pages are deleted, not hidden.
 - Exclude `resources/` from the build (add to `exclude:`), plus `.gitignore` it (decision #6).
 
 ### Socials — `_data/socials.yml`
+
 - `email: jtkaczuk@ethz.ch`, `scholar_userid: _8Rm4lEAAAAJ`, GitHub `jaktk`, LinkedIn `jakubtkaczuk`.
 - Remove `inspirehep_id` unless a personal InspireHEP author id is provided; remove Einstein `custom_social`.
 - **ORCID:** `0000-0001-7997-9423` (rendered via the academicons ORCID icon).
 
 ### About — `_pages/about.md`
+
 - `subtitle` → role + affiliation (e.g. "Senior Researcher, Global Health Engineering, ETH Zürich").
 - `profile.image` ← `resources/pictures/profile-pic-square.png` (copied to `assets/img/prof_pic.jpg`, circular crop); `profile-pic-rectangular.jpeg` reserved for the CV / Open-Graph preview. `more_info` → ETH GHE address / contact.
 - Body: first-person bio adapted from `linkedin-content.md` "About" + a short thread on the arc cryogenics → speech tech → global health engineering.
 - `selected_papers: true`; `announcements.enabled: false`; `latest_posts.enabled: false` (until a post exists).
 
 ### Publications — `_bibliography/papers.bib`
+
 Rebuild from the Scholar list. One BibTeX entry per work with:
+
 - Correct authors (collaboration reports: first authors + `others` so "et al." renders; `max_author_limit: 3` already set).
 - `preview` thumbnail from `resources/pictures/papers/*` (copied into `assets/img/publication_preview/`).
 - `html`/`doi`/`url` → journal DOI or landing page (no committed PDFs).
-- `selected={true}` on: 2020 *JPCRD* equations-of-state (`jpcrd-hene`), 2017 magnetic refrigeration, PhD dissertation, and one recent ETH paper.
+- `selected={true}` on: 2020 _JPCRD_ equations-of-state (`jpcrd-hene`), 2017 magnetic refrigeration, PhD dissertation, and one recent ETH paper.
 
 Thumbnail ↔ paper map (images already provided):
 `autocrime, fcc-ee, fcc-hh, fcc-physics, he-lhc, jpcrd-hene, magnetic-refrigeration, phd-thesis, policy-brief-cape-maclear, waste-bin-placement, willingness-to-pay`.
@@ -76,6 +81,7 @@ FCC/LHC collaboration reports, dissertation, policy brief, patent-pending) and r
 student reports in Projects/Theses instead of duplicating them. (Confirm during the pass.)
 
 ### Projects collection — `_projects/*.md` + `_pages/projects.md`
+
 - `_pages/projects.md`: `display_categories: [Cryogenics, Biogas, Air Quality, Organic Waste, Anthropogenic Waste]` (final taxonomy settled during the thesis read pass; an "Incineration" bucket may be added). `horizontal: false`, masonry on.
 - Delete the 9 demo `_projects/*.md`.
 - **Jakub's own project cards** (category `Cryogenics` / `Biogas`):
@@ -90,16 +96,16 @@ student reports in Projects/Theses instead of duplicating them. (Confirm during 
   ```yaml
   title: <exact thesis title>
   description: <Degree> thesis · <Student full name> · <year>
-  img: assets/img/projects/<student>.png   # result image (placeholder if not yet supplied)
+  img: assets/img/projects/<student>.png # result image (placeholder if not yet supplied)
   category: <theme>
   importance: <n>
   student: <full name>
   degree: BSc | MSc | Semester project
   year: <year>
-  role: Supervisor            # or Co-supervisor, per title page
-  eth_collection: <url or empty>    # ETH Research Collection record of the final thesis (Jakub fills manually)
-  repo: <url or empty>              # GitHub repo, often Global-Health-Engineering (Jakub fills manually)
-  tags: [<domain>, <method>, ...]   # from the tag vocabulary; assigned on read
+  role: Supervisor # or Co-supervisor, per title page
+  eth_collection: <url or empty> # ETH Research Collection record of the final thesis (Jakub fills manually)
+  repo: <url or empty> # GitHub repo, often Global-Health-Engineering (Jakub fills manually)
+  tags: [<domain>, <method>, ...] # from the tag vocabulary; assigned on read
   related_publications: false
   ```
   Body = the ~120-word abstract + the result figure + a "Supervised by Jakub Tkaczuk" note +
@@ -107,6 +113,7 @@ student reports in Projects/Theses instead of duplicating them. (Confirm during 
   labelled buttons; card shows abstract + image only when neither is set).
 
 ### Thesis metadata + abstract generation (the 22)
+
 Source: `resources/student_theses/**`. Process (implementation phase): fan out one lightweight
 subagent per thesis; each reads the title page + Abstract + Conclusions pages and returns
 `{student full name, degree (from filename prefix bsc/msc/sp), year (from title page), exact
@@ -151,17 +158,19 @@ are the finer labels rendered as **subtle pills** (neutral chip + tiny per-domai
   bib template, which we must **not** override (style contract). Instead, each bib entry carries
   its pills as inline HTML in the scholar **`additional_info`** field, styled by a `<style>`
   block in `_pages/publications.md`. Result: per-entry pills with **no template override and no
-  JS**, contract stays green. *Fallback* if `additional_info` escapes the HTML: a small inline
+  JS**, contract stays green. _Fallback_ if `additional_info` escapes the HTML: a small inline
   `<script>` in `publications.md` that appends pills to each entry keyed by citekey — still
   page-level content, no gem files. Confirm which path works during the build.
 
 ### Repositories — `_data/repositories.yml` + `_pages/repositories.md`
+
 - `github_users: [jaktk]` (optionally the `Global-Health-Engineering` org).
 - Render two labelled groups from `repos-to-showcase.md`: **Developed** (5) and
   **Supervised & co-developed** (16). Requires a small content-level edit to `repositories.md`
   to show two named lists (data keys `github_repos_developed` / `github_repos_supervised`).
 
 ### CV — `assets/json/resume.json` + `_pages/cv.md`
+
 - `cv.md`: `cv_format: jsonresume`, `nav_order` after Repositories, drop the example PDF button
   (or point to a real CV PDF if supplied).
 - Populate `resume.json` (JSONResume schema) from `linkedin-content.md`: `basics`, `work` (9
@@ -169,15 +178,18 @@ are the finer labels rendered as **subtle pills** (neutral chip + tiny per-domai
   `awards`/`publications`. Delete Einstein `_data/cv.yml` (unused once on jsonresume).
 
 ### Blog
+
 - Delete demo `_posts/*`. Keep `_pages/blog.md` and pagination. Homepage `latest_posts` stays
   off until a first post exists.
 
 ### Removals / cleanup
+
 `_pages/teaching.md`, `_pages/books.md`, `_pages/dropdown.md`, `_pages/about_einstein.md`,
 `_pages/profiles.md` (Einstein demo), `_teachings/`, `_books/`, demo `_news/*`, demo `_posts/*`,
 demo `_projects/*`, `_data/cv.yml`. Purge Einstein strings from `_config.yml`.
 
 ## Repo hygiene
+
 - `resources/` (theses + paper PDFs, ~650 MB) → add to `.gitignore` and `_config.yml` `exclude:`.
   It is the working source for extraction only; never built or committed.
 - Commit only: paper preview thumbnails (→ `assets/img/publication_preview/`) and thesis result
@@ -187,11 +199,13 @@ demo `_projects/*`, `_data/cv.yml`. Purge Einstein strings from `_config.yml`.
   but confirm they don't get published; git-ignore or relocate to `resources/`).
 
 ## Assets — status
+
 **Provided:** headshot (`profile-pic-square.png` + rectangular), CMS render (`cms-fat.png`),
 Joule–Thomson figure (`jt-coefficient.png`), all 22 thesis result images, 12 paper thumbnails,
 ORCID `0000-0001-7997-9423`.
 
 **Still open (non-blocking; sensible defaults in place):**
+
 1. **Own biogas-sensing prototype photo** — default is image-light until supplied.
 2. **Thesis links** — Jakub adds **ETH Research Collection** + **GitHub** URLs manually per thesis
    (fields scaffolded in each card; some have both, some neither).
@@ -200,18 +214,22 @@ ORCID `0000-0001-7997-9423`.
 5. **InspireHEP author id** (optional).
 
 ## Validation
+
 Per `al-folio-bootstrap` skill + AGENTS.md:
+
 ```
 npm ci
 npm run lint:prettier
 bundle exec al-folio upgrade audit --no-fail
 bundle exec jekyll build --baseurl ""      # user-site: root baseurl
 ```
+
 Plus `npm run lint:style-contract` (must stay green — no starter-owned runtime added). Spot-check
 the built `_site/` for: bolded author name in publications, category grouping on projects, two
 repo groups, CV rendering, no Einstein strings, `resources/` absent from output.
 
 ## Open items / risks
+
 - **Category taxonomy** finalizes only after reading the theses (some "unsorted" titles unknown).
 - **Author lists** for the mega-collaboration reports are huge; enter a short prefix + `and others`.
 - **Thesis links**: many theses may have no public URL → abstract + image only (acceptable).
