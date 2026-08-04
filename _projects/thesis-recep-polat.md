@@ -17,8 +17,6 @@ related_publications: false
 
 This thesis investigates the feasibility of pasteurizing anaerobic digester effluent using a commercial solar water heater equipped with off-grid electronic controls, tested at a biogas site in Mzuzu, Malawi. Custom electronics regulated effluent valve release based on internal tank temperature, aiming to maximize hydraulic throughput while ensuring pathogen inactivation. Thermal monitoring revealed pronounced vertical stratification within the tank, with temperatures exceeding 80 °C at the top despite a persistent cold pocket near the inlet. Applying a threshold-based control algorithm, the system processed over 20 liters of effluent per day. Microbiological testing indicated reduced E. coli concentrations, though results from two field methods were inconsistent. The total system cost, about 870 CHF, exceeded prior comparable studies, highlighting cost and power-management challenges for low-income deployment.
 
-_MSc thesis · 2026 · Jakub Tkaczuk, co-supervisor_
-
 <div style="margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.4rem">
   <span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.75rem;line-height:1;padding:.3rem .6rem;border-radius:999px;background:rgba(127,127,127,.12);border:1px solid rgba(127,127,127,.28)"><span style="width:.5rem;height:.5rem;border-radius:50%;background:#16a34a;display:inline-block;flex:0 0 auto"></span>biogas</span>
   <span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.75rem;line-height:1;padding:.3rem .6rem;border-radius:999px;background:rgba(127,127,127,.12);border:1px solid rgba(127,127,127,.28)"><span style="width:.5rem;height:.5rem;border-radius:50%;background:#0d9488;display:inline-block;flex:0 0 auto"></span>sanitation</span>

@@ -5,7 +5,7 @@ permalink: /projects/
 description: My own engineering work, and a showcase of the student theses I have supervised at ETH Zürich. Every card is tagged by topic and method.
 nav: true
 nav_order: 3
-display_categories: [Cryogenics, Biogas, Water & Sanitation, Anthropogenic Waste, Organic Waste, Air Quality]
+display_categories: [Cryogenics, Biogas, Water & Sanitation, Anthropogenic Waste, Organic Waste, Air Quality, Energy & Mobility]
 ---
 
 <style>
