@@ -1,0 +1,258 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Closing the Loop – Frugal Innovation in Plastic Sorting: Design, Implementation, and Testing of a Sink-Float Separator for Waste Recycling in Malawi | Jakub Tkaczuk </title> <meta name="author" content="Jakub Tkaczuk"> <meta name="description" content="MSc thesis · Sven Prinz · 2025"> <meta name="keywords" content="Jakub Tkaczuk, cryogenics, thermodynamics, equations of state, global health engineering, biogas, low-cost instrumentation, ETH Zurich"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9D%84%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://jaktk.github.io/projects/thesis-sven-prinz/"> <script src="/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> <span class="font-weight-bold">Jakub</span> Tkaczuk </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/">projects <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/repositories/">repositories </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">cv </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Closing the Loop – Frugal Innovation in Plastic Sorting: Design, Implementation, and Testing of a Sink-Float Separator for Waste Recycling in Malawi</h1> <p class="post-description">MSc thesis · Sven Prinz · 2025</p> </header> <article> <p>This thesis addresses the recycling of mixed post-consumer plastic flakes in Blantyre, Malawi, where property differences between plastic types had left large quantities unusable by two local NGOs after failed attempts to mold them into bricks. A literature review and small-scale proof-of-concept tests were used to compare plastic separation methods, identifying sink-float separation as most suitable for the local context due to its simplicity and robustness. A manually operated, two-stage sink-float separation prototype was then designed and manufactured from locally available materials and validated through field testing. The prototype achieved separation purities of 96.55% for PET and 99.77% for HDPE, sufficient for reuse in local recycling operations, while purity for PP remained insufficient at 69.76%, and contamination and quality-control needs were identified for future work.</p> <div style="margin-top:1.4rem;display:flex;flex-wrap:wrap;gap:.4rem"> <span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.75rem;line-height:1;padding:.3rem .6rem;border-radius:999px;background:rgba(127,127,127,.12);border:1px solid rgba(127,127,127,.28)"><span style="width:.5rem;height:.5rem;border-radius:50%;background:#ea580c;display:inline-block;flex:0 0 auto"></span>anthropogenic waste</span> <span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.75rem;line-height:1;padding:.3rem .6rem;border-radius:999px;background:rgba(127,127,127,.12);border:1px solid rgba(127,127,127,.28)"><span style="width:.5rem;height:.5rem;border-radius:50%;background:#9ca3af;display:inline-block;flex:0 0 auto"></span>prototyping / open hardware</span> <span style="display:inline-flex;align-items:center;gap:.3rem;font-size:.75rem;line-height:1;padding:.3rem .6rem;border-radius:999px;background:rgba(127,127,127,.12);border:1px solid rgba(127,127,127,.28)"><span style="width:.5rem;height:.5rem;border-radius:50%;background:#9ca3af;display:inline-block;flex:0 0 auto"></span>field deployment</span> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Jakub Tkaczuk. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-publications",
+          title: "publications",
+          description: "Publications in reverse-chronological order; my name is emphasised, and each entry is tagged by topic and method.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "My own engineering work, and a showcase of the student theses I have supervised at ETH Zürich. Every card is tagged by topic and method.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-repositories",
+          title: "repositories",
+          description: "Software and open hardware I have built, or co-developed with the students I supervise — mostly low-cost instrumentation and appropriate technology for global health engineering.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/repositories/";
+          },
+        },{id: "nav-cv",
+          title: "cv",
+          description: "Cryogenics and thermodynamics, then low-cost instrumentation and appropriate technology for global health engineering. &amp;nbsp;Download CV — one-pager&amp;nbsp;Download CV — two-pager",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "projects-low-cost-biogas-flow-and-composition-sensing",
+          title: 'Low-cost biogas flow and composition sensing',
+          description: "Thermal-anemometry monitoring for digesters — dMRV and carbon offsetting (patent pending)",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/biogas-sensing/";
+            },},{id: "projects-equations-of-state-for-cryogenic-mixtures",
+          title: 'Equations of state for cryogenic mixtures',
+          description: "Reference equations of state for helium, neon and argon mixtures (PhD, CEA / NIST)",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cryo-eos-mixtures/";
+            },},{id: "projects-joule-thomson-coefficient-measurements",
+          title: 'Joule-Thomson coefficient measurements',
+          description: "Large-pressure-drop isenthalpic measurements to constrain cryogenic equations of state",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cryo-joule-thomson/";
+            },},{id: "projects-magnetic-refrigeration-for-the-future-circular-collider",
+          title: 'Magnetic refrigeration for the Future Circular Collider',
+          description: "Feasibility of 1.6 K superfluid-helium magnetic refrigeration for the FCC-ee",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cryo-magnetic-refrigeration/";
+            },},{id: "projects-cryogenic-moderator-system-for-the-european-spallation-source",
+          title: 'Cryogenic Moderator System for the European Spallation Source',
+          description: "Liquid-hydrogen cryostat design and factory-acceptance-test preparation",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cryo-moderator-ess/";
+            },},{id: "projects-improving-the-solar-sludge-pasteurization-technology",
+          title: 'Improving the Solar Sludge Pasteurization Technology',
+          description: "MSc thesis · Deniz Cinar · 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-deniz-cinar/";
+            },},{id: "projects-tipping-aid-for-loading-small-trucks-on-waste-collection-tours",
+          title: 'Tipping Aid for Loading Small Trucks on Waste Collection Tours',
+          description: "MSc thesis · Dominic Wälti · 2023",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-dominic-waelti/";
+            },},{id: "projects-development-of-a-low-cost-biogas-monitoring-sensor",
+          title: 'Development of a Low-cost Biogas Monitoring Sensor',
+          description: "MSc thesis · Elia Weber · 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-elia-weber/";
+            },},{id: "projects-development-and-field-testing-of-a-solar-powered-glass-tumbler-for-waste-glass-processing-in-cape-maclear-malawi",
+          title: 'Development and Field Testing of a Solar-Powered Glass Tumbler for Waste Glass Processing...',
+          description: "MSc thesis · Emma Steinke · 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-emma-steinke/";
+            },},{id: "projects-design-and-integration-of-a-cooling-system-for-openversum-39-s-water-filtration-technology",
+          title: 'Design and Integration of a Cooling System for Openversum&amp;#39;s Water Filtration Technology',
+          description: "MSc thesis · Fernand Braam · 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-fernand-braam/";
+            },},{id: "projects-design-and-development-of-a-low-cost-hydrogen-sulfide-sensor-system-for-biogas-monitoring",
+          title: 'Design and Development of a Low-Cost Hydrogen Sulfide Sensor System for Biogas Monitoring...',
+          description: "BSc thesis · Flurin Vital · 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-flurin-vital/";
+            },},{id: "projects-sludge-pasteurization-with-solar-water-heaters-system-optimization",
+          title: 'Sludge Pasteurization with Solar Water Heaters – System Optimization',
+          description: "MSc thesis · Gianluca Lotti · 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-gianluca-lotti/";
+            },},{id: "projects-system-parameter-analysis-of-a-biogas-powered-faecal-sludge-pasteuriser",
+          title: 'System Parameter Analysis of a Biogas-Powered Faecal Sludge Pasteuriser',
+          description: "BSc thesis · Jent Imelman · 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-jent-imelman/";
+            },},{id: "projects-guidelines-for-low-cost-incineration-systems",
+          title: 'Guidelines for Low-Cost Incineration Systems',
+          description: "Semester project thesis · Joël Kocher · 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-joel-kocher/";
+            },},{id: "projects-design-and-construction-of-a-black-soldier-fly-larvae-counting-machine",
+          title: 'Design and Construction of a Black Soldier Fly Larvae Counting Machine',
+          description: "MSc thesis · Jonas Biner · 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-jonas-biner/";
+            },},{id: "projects-waste-logistics-and-transport-modelling-in-cape-maclear-malawi",
+          title: 'Waste Logistics and Transport Modelling in Cape Maclear, Malawi',
+          description: "MSc thesis · Josch Stricker · 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-josch-stricker/";
+            },},{id: "projects-design-implementation-and-validation-of-a-continuous-anaerobic-digestion-pasteurization-plant-for-decentralized-sanitation-in-malawi",
+          title: 'Design, Implementation, and Validation of a Continuous Anaerobic Digestion Pasteurization Plant for Decentralized...',
+          description: "MSc thesis · Luca Tim Jakobs · 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-luca-jakobs/";
+            },},{id: "projects-3d-printed-device-for-microbial-water-quality-testing",
+          title: '3D-Printed Device for Microbial Water Quality Testing',
+          description: "BSc thesis · Gabriel Moreno · 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-moreno-gabriel/";
+            },},{id: "projects-development-of-a-low-cost-incinerator-in-cape-maclear-malawi",
+          title: 'Development of a Low-Cost Incinerator in Cape Maclear, Malawi',
+          description: "MSc thesis · Mosè Peduzzi · 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-mose-peduzzi/";
+            },},{id: "projects-development-of-a-pay-as-you-go-battery-charging-system-for-electric-mobility-in-nairobi-kenya",
+          title: 'Development of a Pay-As-You-Go Battery-Charging System for Electric Mobility in Nairobi, Kenya',
+          description: "MSc thesis · Patrick Fässler · 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-patrick-faessler/";
+            },},{id: "projects-construction-of-a-glass-crusher-and-evaluation-of-waste-valorization-pathways-for-cape-maclear-malawi",
+          title: 'Construction of a Glass Crusher and Evaluation of Waste Valorization Pathways for Cape...',
+          description: "MSc thesis · Philippe Colbach · 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-philippe-colbach/";
+            },},{id: "projects-air-quality-monitoring-from-open-waste-and-incinerator-burning-in-cape-maclear-malawi",
+          title: 'Air quality monitoring from open waste and incinerator burning in Cape Maclear, Malawi...',
+          description: "MSc thesis · Raphaël Bahisson · 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-raphael-bahisson/";
+            },},{id: "projects-sludge-pasteurization-with-solar-water-heaters-an-off-grid-electrically-controlled-solution",
+          title: 'Sludge Pasteurization with Solar Water Heaters: An Off-Grid Electrically Controlled Solution',
+          description: "MSc thesis · Recep Polat · 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-recep-polat/";
+            },},{id: "projects-testing-calibration-and-three-wavelength-adaptation-of-bcmeter-an-open-source-low-cost-black-carbon-monitor",
+          title: 'Testing, Calibration, and Three-Wavelength Adaptation of bcMeter, an Open-Source, Low-Cost Black Carbon Monitor...',
+          description: "MSc thesis · Serena Gioia Loggia · 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-serena-loggia/";
+            },},{id: "projects-closing-the-loop-frugal-innovation-in-plastic-sorting-design-implementation-and-testing-of-a-sink-float-separator-for-waste-recycling-in-malawi",
+          title: 'Closing the Loop – Frugal Innovation in Plastic Sorting: Design, Implementation, and Testing...',
+          description: "MSc thesis · Sven Prinz · 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-sven-prinz/";
+            },},{id: "projects-urine-diverting-dry-toilet-design-manufacturing-and-performance-testing-of-earth-concrete",
+          title: 'Urine-Diverting Dry Toilet: Design, Manufacturing, and Performance Testing of Earth Concrete',
+          description: "MSc thesis · Teymour D&#39;Andrea · 2025",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-teymour-dandrea/";
+            },},{id: "projects-solar-pasteurization-for-anaerobic-digestion-sludge",
+          title: 'Solar Pasteurization for Anaerobic Digestion Sludge',
+          description: "MSc thesis · Tim-Luân Grimont · 2024",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/thesis-tim-luan-grimont/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6A%74%6B%61%63%7A%75%6B@%65%74%68%7A.%63%68", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0001-7997-9423", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=_8Rm4lEAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/jaktk", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/jakubtkaczuk", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
