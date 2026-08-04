@@ -1,14 +1,31 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - jaktk
 
 repo_description_lines_max: 2
 
-github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+# Repositories I have developed
+github_repos_developed:
+  - ghe-bomad/drager-xam-8000
+  - jaktk/SolidProps
+  - jaktk/cryo-jt
+  - Global-Health-Engineering/recycling-network-optimization
+  - Global-Health-Engineering/group-safety
+
+# Repositories I have supervised or co-developed with students
+github_repos_supervised:
+  - Global-Health-Engineering/iv-flow-monitor
+  - Global-Health-Engineering/mzuzu-biogas-research
+  - Global-Health-Engineering/glass-tumbler
+  - Global-Health-Engineering/glass-crusher-design
+  - Global-Health-Engineering/bsf-lcm
+  - Global-Health-Engineering/ultrasonic-flowmeter
+  - Global-Health-Engineering/plastic-separation-blantyre
+  - Global-Health-Engineering/solar-pasteurizer-v3
+  - Global-Health-Engineering/solar-pasteurizer-v2
+  - Global-Health-Engineering/sitting-UDDT
+  - Global-Health-Engineering/injection-molding-with-resin-molds
+  - Global-Health-Engineering/cookstove-sensing
+  - Global-Health-Engineering/waste-soil-composting-cape-maclear
+  - Global-Health-Engineering/biogas-powered-pasteurizer-modeling
+  - Global-Health-Engineering/arduino-opc-portable-and-sationary
+  - Global-Health-Engineering/GHE-data-logger
